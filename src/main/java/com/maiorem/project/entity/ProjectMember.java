@@ -25,13 +25,12 @@ public class ProjectMember {
 
     private boolean fromSocial;
 
-    @ElementCollection(fetch = FetchType.LAZY)
-    @Builder.Default
-    private Set<ProjectMemberRole> roleSet = new HashSet<>();
-
-    public void addMemberRole(ProjectMemberRole projectMemberRole) {
-        roleSet.add(ProjectMemberRole);
-    }
-
+//    @ElementCollection(fetch = FetchType.LAZY)
+//    @Builder.Default
+//    private Set<ProjectMemberRole> roleSet = new HashSet<>();
+//
+//    public void addMemberRole(ProjectMemberRole projectMemberRole) {
+//        roleSet.add(projectMemberRole);
+//    }
 
 }
