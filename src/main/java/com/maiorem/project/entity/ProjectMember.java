@@ -2,8 +2,11 @@ package com.maiorem.project.entity;
 
 import lombok.*;
 
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
+import java.util.HashSet;
 
 @Entity
 @Builder
@@ -21,5 +24,14 @@ public class ProjectMember {
     private String name;
 
     private boolean fromSocial;
+
+    @ElementCollection(fetch = FetchType.LAZY)
+    @Builder.Default
+    private Set<ProjectMemberRole> roleSet = new HashSet<>();
+
+    public void addMemberRole(ProjectMemberRole projectMemberRole) {
+        roleSet.add(ProjectMemberRole);
+    }
+
 
 }
