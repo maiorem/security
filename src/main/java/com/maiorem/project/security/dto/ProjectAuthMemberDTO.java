@@ -1,5 +1,8 @@
 package com.maiorem.project.security.dto;
 
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.User;
@@ -7,6 +10,9 @@ import org.springframework.security.core.userdetails.User;
 import java.util.Collection;
 
 @Log4j2
+@Getter
+@Setter
+@ToString
 public class ProjectAuthMemberDTO extends User {
 
     private String email;
@@ -20,5 +26,6 @@ public class ProjectAuthMemberDTO extends User {
         this.email = username;
         this.fromSocial = fromSocial;
     }
+
 
 }

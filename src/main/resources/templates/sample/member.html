@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ko">
+<html lang="ko" xmlns:sec="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -9,5 +9,16 @@
 </head>
 <body>
     <h1>For Member</h1>
+
+<!--    <div sec:authorize="hasRole('USER')">HAS USER ROLE</div>-->
+<!--    <div sec:authorize="hasRole('MANAGER')">HAS MANAGER ROLE</div>-->
+<!--    <div sec:authorize="hasRole('ADMIN')">HAS ADMIN ROLE</div>-->
+
+<!--    <div sec:authorize="isAuthoenticated()">ONLY AUTHENTICATED USER CAN SEE THIS TEXT</div>-->
+
+<!--    Authenticated username :-->
+<!--    <div sec:authentication="name"></div>-->
+<!--    Authenticated user roles:-->
+<!--    <div sec:authentication="principal.authorities"></div>-->
 </body>
 </html>
