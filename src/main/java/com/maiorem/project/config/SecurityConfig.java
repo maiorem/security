@@ -33,13 +33,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     }
 
-    @Override
-    public void configure(AuthenticationManagerBuilder auth) throws Exception {
-
-        // 사용자 계정 user1
-        auth.inMemoryAuthentication().withUser("user1")
-                // password 1111 인코딩 결과
-                .password("$2a$10$FCMJNNaiKdKziZppY4hFN.Soq.9hIA.GJ1XbVxijyGzXPJD1Jo68e")
-                .roles("USER");
-    }
+//    @Override
+//    public void configure(AuthenticationManagerBuilder auth) throws Exception {
+//
+//        // 사용자 계정 user1
+//        auth.inMemoryAuthentication().withUser("user1")
+//                // password 1111 인코딩 결과
+//                .password("$2a$10$FCMJNNaiKdKziZppY4hFN.Soq.9hIA.GJ1XbVxijyGzXPJD1Jo68e")
+//                .roles("USER");
+//    }
 }

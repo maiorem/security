@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
+import java.util.Optional;
 import java.util.stream.IntStream;
 
 @SpringBootTest
@@ -41,7 +42,20 @@ public class ProjectMemberTests {
                 projectMember.addMemberRole(ProjectMemberRole.ADMIN);
             }
 
+            repository.save(projectMember);
+
         });
+
+    }
+
+    @Test
+    public void testRead() {
+
+        Optional<ProjectMember> result = repository.findByEmail("user95@maiorem.com", false);
+
+        ProjectMember projectMember = result.get();
+
+        System.out.println(projectMember);
 
 
     }
