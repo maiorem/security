@@ -21,9 +21,9 @@ public class ProjectUserDetailsService implements UserDetailsService {
 
     private final ProjectMemberRepository projectMemberRepository;
 
+
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-
         log.info("ProjectUserDetailsService loadUserByUsername " + username);
 
         Optional<ProjectMember> result = projectMemberRepository.findByEmail(username, false);

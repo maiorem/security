@@ -21,7 +21,7 @@ public class ProjectAuthMemberDTO extends User {
 
     private boolean fromSocial;
 
-      public ProjectAuthMemberDTO(String username, String password, boolean fromSocial, Collection<? extends GrantedAuthority> authorities) {
+    public ProjectAuthMemberDTO(String username, String password, boolean fromSocial, Collection<? extends GrantedAuthority> authorities) {
         super(username, password, authorities);
         this.email = username;
         this.fromSocial = fromSocial;
